@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#000">
+        <title>ARMageddon</title>
+        <style>
+            body {
+                perspective: 40px;
+            }
+
+            .gameNav {
+                padding: 0.25rem;
+                background: #000;
+            }
+        </style>
+        <script>
+
+        </script>
+    </head>
+    <body>
+        <div class="canvas_cont" stage="0">
+            <canvas id="intro" tabindex="0"></canvas>
+        </div>
+
+        <div class="canvas_cont" stage="1" style="display:none;">
+            <canvas id="main" tabindex="0"></canvas>
+        </div>
+
+        <main class="gameWrapper" style="display:none;">
+
+            <section>
+                <button id="game_start">Start Game</button>
+            </section>
+
+            <section class="dialogBox" id="db_plan">
+                <h2>
+                    Pick the plan to protect your home: </h2>
+                <p>
+                    <button res="win">Barricade Windows</button>
+                    &#60;---&#62;
+                    <button res="door">Barricade Doors</button>
+                </p>
+            </section>
+
+            <section class="dialogBox" id="db_unsafe">
+                <h2>It's no longer safe to stay in your home! Pick a plan:</h2>
+                <p>
+                    <button res="leave">Get some items and leave!</button>
+                    &#60; --- &#62;
+                    <button res="dont">Don't</button>
+                </p>
+            </section>
+
+            <section class="dialogBox" id="db_dont">
+                <h2>You died from the ensuing radiation.</h2>
+                <p>
+                    <button>Restart</button>
+                </p>
+            </section>
+
+            <section class="dialogBox" id="db_02">
+                <h2>You can't leave because you barricaded your door!</h2>
+                <p>
+                    <button>Restart</button>
+                </p>
+            </section>
+
+            <section class="dialogBox gameInventory" id="db_invLeave">
+                <h2>Get what you need and GO!</h2>
+                <ul class="list">
+                </ul>
+                <h3 class="gameInventory_percentage">0 / 3</h3>
+                <button class="gameInvLeave">Leave</button>
+            </section>
+        </main>
+    </body>
+</html>
