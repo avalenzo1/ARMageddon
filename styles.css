@@ -1,0 +1,92 @@
+@import url('https://fonts.googleapis.com/css2?family=Source+Code+Pro&display=swap');
+
+body {
+    background-color: #000;
+    color: #fff;
+    font-family: 'Source Code Pro', monospace;
+
+}
+
+.canvas_cont, .gameWrapper {
+    display: flex;
+    justify-content: center;
+}
+
+.gameWrapper section {
+    margin: 1rem 0;
+}
+
+.gameInventory {
+    padding: 0.5rem 1.5rem;
+    border: solid 1px #333;
+}
+
+.gameNav {
+    transition: 0.3s;
+}
+
+button,
+.btn {
+    background-color: transparent;
+    color: #fff;
+    border: 0;
+    font-family: 'Source Code Pro', monospace;
+    font-size: 15px;
+    padding: 0;
+}
+
+button:before,
+.btn:before {
+    content: "[";
+}
+
+button:after,
+.btn:after {
+    content: "]";
+}
+
+button:hover,
+.btn:hover {
+    color: #ff0;
+}
+
+button:focus,
+.btn:focus {
+    outline: dotted 1px #fff;
+}
+
+.gameInventory .list input[type="checkbox"] {
+    display: none;
+}
+
+.gameInventory .list input[type="checkbox"]:checked+label.btn {
+    background: blue;
+}
+
+.gameInventory_percentage {
+    transition: color 0.2s;
+}
+
+button:disabled {
+    cursor: not-allowed;
+    color: #bbb;
+    border: solid 1px #aaa;
+}
+
+.disabled {
+    animation: disabled 0.3s infinite;
+}
+
+@keyframes disabled {
+    0% {
+        color: red;
+    }
+
+    50% {
+        color: orange;
+    }
+
+    100% {
+        color: red;
+    }
+}
