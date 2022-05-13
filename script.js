@@ -806,7 +806,6 @@ let main = (function() {
             ctx.textAlign = 'center';
             
             ctx.fillText(`Aw Snap, an Error occured! ${Error.name}: ${Error.message}`, CANVAS_WIDTH / 2, CANVAS_HEIGHT / 2);
-            throw Error;
         }
 
         current_stage = window.requestAnimationFrame(() => {
