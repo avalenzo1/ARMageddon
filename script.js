@@ -783,8 +783,7 @@ let main = (function() {
 
     let loop = () => {
             ctx.clearRect(0, 0, CANVAS_WIDTH, CANVAS_HEIGHT);
-        
-		try {
+	    
             ctx.fillStyle = "#333";
             ctx.fillRect(0, 0, CANVAS_WIDTH, CANVAS_HEIGHT);
 
@@ -799,14 +798,6 @@ let main = (function() {
             if (camera.y < 0) {
                 camera.y = 0;
             } // Prevents block from going to far up
-        } catch (Error) {
-            ctx.fillStyle = "#000";
-            ctx.fillRect(0, 0, CANVAS_WIDTH, CANVAS_HEIGHT);
-            ctx.fillStyle = "#fff";
-            ctx.textAlign = 'center';
-            
-            ctx.fillText(`Aw Snap, an Error occured! ${Error.name}: ${Error.message}`, CANVAS_WIDTH / 2, CANVAS_HEIGHT / 2);
-        }
 
         current_stage = window.requestAnimationFrame(() => {
             const now = performance.now();
