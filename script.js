@@ -214,6 +214,10 @@ $("button").click(function() {
     key.play();
 });
 
+$(".reset").click(function() {
+	location.reload();
+});
+
 // Start of jQuery Code
 
 $(".gameInventory .list").html("");
