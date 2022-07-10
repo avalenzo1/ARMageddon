@@ -528,7 +528,7 @@ let main = (function() {
 
     let sprite = (function() {
         let img = new Image();
-        img.src = "https://assets.stickpng.com/thumbs/580b57fcd9996e24bc43c1ed.png";
+        img.src = "sprite.png";
         
         let heart = new Image();
         heart.src = "https://i.ibb.co/qCVYXB0/heart.png";
