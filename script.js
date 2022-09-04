@@ -528,7 +528,7 @@ let main = (function() {
 
     let sprite = (function() {
         let img = new Image();
-        img.src = "sprite.png";
+        img.src = "https://raw.githubusercontent.com/avalenzo1/ARMageddon/main/sprite.png";
         
         let heart = new Image();
         heart.src = "https://i.ibb.co/qCVYXB0/heart.png";
