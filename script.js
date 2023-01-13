@@ -214,10 +214,6 @@ $("button").click(function() {
     key.play();
 });
 
-$(".reset").click(function() {
-	location.reload();
-});
-
 // Start of jQuery Code
 
 $(".gameInventory .list").html("");
@@ -528,7 +524,7 @@ let main = (function() {
 
     let sprite = (function() {
         let img = new Image();
-        img.src = "https://raw.githubusercontent.com/avalenzo1/ARMageddon/main/sprite.png";
+        img.src = "https://pics.drugstore.com/prodimg/416747/900.jpg";
         
         let heart = new Image();
         heart.src = "https://i.ibb.co/qCVYXB0/heart.png";
@@ -787,7 +783,8 @@ let main = (function() {
 
     let loop = () => {
             ctx.clearRect(0, 0, CANVAS_WIDTH, CANVAS_HEIGHT);
-	    
+        
+		try {
             ctx.fillStyle = "#333";
             ctx.fillRect(0, 0, CANVAS_WIDTH, CANVAS_HEIGHT);
 
@@ -802,6 +799,15 @@ let main = (function() {
             if (camera.y < 0) {
                 camera.y = 0;
             } // Prevents block from going to far up
+        } catch (Error) {
+            ctx.fillStyle = "#000";
+            ctx.fillRect(0, 0, CANVAS_WIDTH, CANVAS_HEIGHT);
+            ctx.fillStyle = "#fff";
+            ctx.textAlign = 'center';
+            
+            ctx.fillText(`Aw Snap, an Error occured! ${Error.name}: ${Error.message}`, CANVAS_WIDTH / 2, CANVAS_HEIGHT / 2);
+            throw Error;
+        }
 
         current_stage = window.requestAnimationFrame(() => {
             const now = performance.now();
